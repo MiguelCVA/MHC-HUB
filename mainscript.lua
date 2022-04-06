@@ -20,12 +20,19 @@ local function NotPlaceId()
 end
 
 
-local GameSupportTable = {}
+local GameSupportTable = {
+    "Create by : Myg#0002";
 
-for _,v in ipairs(GameSupportTable) do
- if not game.PlaceId == v then  
+}
+
+if game.PlaceId == GameSupportTable[1] then
+    
+
+
+
+
+
+
+else
     NotPlaceId()
- else
-     print("Was game support!")
- end
 end
