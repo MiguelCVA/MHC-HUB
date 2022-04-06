@@ -19,30 +19,13 @@ local function NotPlaceId()
     
 end
 
---!--  Toh but theres lava rising --!--
 
- if  game.PlaceId == 6502546031 then  
-    --!-- Kavo --!--
-      local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local GameSupportTable = {}
 
-     --!-- Ui Main --!--
-     local MainWindow = Library.CreateLib("Toh but theres lava rising -- MHC ", "Sentinel")
-
-     --!-- LocalPlayer Tab --!--
-
-     local LocalPlayerTab = MainWindow:NewTab("Player")
-     local GlobalTab = MainWindow:NewTab("Server")
-
-     --!-- Section --!--
-     
-     local CharacterSection = LocalPlayerTab:NewSection("Character")
-
-     --!-- Slides --!--
-     CharacterSection:NewSlider("WalkSpeed", "Set WalkSpeed", 500, 16, function(v) -- 500 (MaxValue) | 0 (MinValue)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
-    end)
-
-
-else
+for _,v in ipairs(GameSupportTable) do
+ if not game.PlaceId == v then  
     NotPlaceId()
+ else
+     print("Was game support!")
+ end
 end
